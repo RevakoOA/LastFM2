@@ -7,6 +7,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+def lastFmApiKeyFile = rootProject.file("lastfmapikey.properties")
+def lastFmProperties = new Properties()
+lastFmProperties.load(new FileInputStream(lastFmApiKeyFile))
+
 android {
     namespace 'com.ostapr.core.network'
     compileSdk targetSdkNumber
@@ -17,6 +21,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField("String", "LAST_FM_API_KEY", lastFmProperties['LAST_FM_API_KEY'])
+        buildConfigField("String", "LAST_FM_SHARED_SECRET", lastFmProperties['LAST_FM_SHARED_SECRET'])
     }
 
     buildTypes {
