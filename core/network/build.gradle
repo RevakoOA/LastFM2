@@ -45,6 +45,10 @@ dependencies {
     implementation "com.google.code.gson:gson:2.8.9"
     implementation "com.squareup.retrofit2:retrofit:$libs.retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$libs.retrofit"
+    implementation 'androidx.paging:paging-common-ktx:3.1.1'
+
+    def paging_version = "3.1.1"
+    implementation "androidx.paging:paging-runtime:$libs.paging"
 
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt"

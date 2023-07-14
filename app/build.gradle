@@ -67,6 +67,8 @@ dependencies {
     implementation project(path: ':core:network')
     implementation project(path: ':core:model')
     implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.paging:paging-common-ktx:3.1.1'
+    implementation 'androidx.fragment:fragment-ktx:1.6.0'
     testImplementation "junit:junit:4.13.2"
     androidTestImplementation "androidx.test.ext:junit:$testing.junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$testing.espresso"
