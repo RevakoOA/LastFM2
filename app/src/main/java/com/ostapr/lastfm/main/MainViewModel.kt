@@ -6,8 +6,13 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.ostapr.core.domain.ArtistsRepository
 import com.ostapr.model.Artist
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
-class MainViewModel(private val artistsRepository: ArtistsRepository): ViewModel() {
-    internal val artists: Flow<PagingData<Artist>> = artistsRepository.getTopArtists().cachedIn(viewModelScope)
+@HiltViewModel
+class MainViewModel @Inject constructor(private val artistsRepository: ArtistsRepository) :
+    ViewModel() {
+    internal val artists: Flow<PagingData<Artist>> =
+        artistsRepository.getTopArtists().cachedIn(viewModelScope)
 }

@@ -5,6 +5,8 @@ buildscript {
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 def lastFmApiKeyFile = rootProject.file("lastfmapikey.properties")
@@ -52,8 +54,11 @@ dependencies {
     implementation 'androidx.paging:paging-common-ktx:3.1.1'
     implementation project(path: ':core:domain')
 
-    def paging_version = "3.1.1"
     implementation "androidx.paging:paging-runtime:$libs.paging"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$libs.hilt"
+    kapt "com.google.dagger:hilt-compiler:$libs.hilt"
 
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt"
@@ -67,4 +72,9 @@ dependencies {
     implementation 'androidx.core:core-ktx:+'
     testImplementation "junit:junit:4.13.2"
     androidTestImplementation "androidx.test.ext:junit:$testing.junit"
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
 }

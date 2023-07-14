@@ -6,8 +6,11 @@ import androidx.paging.PagingData
 import com.ostapr.core.domain.ArtistsRepository
 import com.ostapr.model.Artist
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
+import javax.inject.Singleton
 
-internal class ArtistsRepositoryImpl constructor(
+@Singleton
+internal class ArtistsRepositoryImpl @Inject constructor(
     private val artistsService: ArtistsService
 ): ArtistsRepository {
     override fun getTopArtists(): Flow<PagingData<Artist>> = Pager(

@@ -6,6 +6,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -67,6 +68,11 @@ dependencies {
     implementation 'androidx.core:core-ktx:+'
     implementation project(path: ':core:network')
     implementation project(path: ':core:model')
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$libs.hilt"
+    kapt "com.google.dagger:hilt-compiler:$libs.hilt"
+
     implementation 'androidx.core:core-ktx:+'
     implementation 'androidx.paging:paging-common-ktx:3.1.1'
     implementation 'androidx.fragment:fragment-ktx:1.6.0'
@@ -78,4 +84,9 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4"
     debugImplementation "androidx.compose.ui:ui-tooling"
     debugImplementation "androidx.compose.ui:ui-test-manifest"
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
 }
