@@ -1,0 +1,16 @@
+ext {
+    KOTLIN_JVM_TARGET = '17'
+    JAVA_COMPILE_VERSION = JavaVersion.VERSION_17
+
+    minSdkNumber = 24
+    targetSdkNumber = 34
+
+    libs = [
+        retrofit : "2.9.0",
+    ]
+
+    testing = [
+        junit : "1.1.3",
+        espresso : "3.4.0",
+    ]
+}
