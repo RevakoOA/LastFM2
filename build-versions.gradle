@@ -2,8 +2,11 @@ ext {
     KOTLIN_JVM_TARGET = '17'
     JAVA_COMPILE_VERSION = JavaVersion.VERSION_17
 
-    minSdkNumber = 24
-    targetSdkNumber = 34
+    KOTLIN_VERSION = "1.8.20"
+    KOTLIN_COMPILER_EXTENSION_VERSION = "1.4.5" // Taken based on KOTLIN_VERSION from https://developer.android.com/jetpack/androidx/releases/compose-compile
+
+    MIN_SDK_NUMBER = 24
+    TARGET_SDK_NUMBER = 34
 
     libs = [
         retrofit : "2.9.0",

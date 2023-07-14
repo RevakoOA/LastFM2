@@ -6,4 +6,7 @@ data class Artist(
     val listeners: Int,
     val mbid: String,
     val imageUrls: List<String>,
-)
+) {
+    /** Pick image url based on input criteria. */
+    fun pickImageUrl(): String? = imageUrls.getOrNull(0)
+}

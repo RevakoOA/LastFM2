@@ -6,10 +6,14 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface ArtistsApi {
+internal interface ArtistsService {
     @GET("?method=geo.gettopartists")
     fun artists(@Query("country") country: String): Call<TopArtists>
 
     @GET("?method=artist.getinfo")
     fun artistDetails(@Query("artist")artistName: String): Call<Artist>
+
+    companion object {
+        const val LAST_FM_BASE_URL = "https://ws.audioscrobbler.com/2.0/"
+    }
 }

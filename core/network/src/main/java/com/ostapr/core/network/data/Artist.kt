@@ -1,6 +1,6 @@
 package com.ostapr.core.network.data
 
-data class Artist(
+internal data class Artist(
     val images: List<Image>,
     val mbid: String,
     val name: String,
@@ -9,7 +9,7 @@ data class Artist(
     val rank: Int
 )
 
-data class Image(
+internal data class Image(
     val url: String,
     val size: String
 )
