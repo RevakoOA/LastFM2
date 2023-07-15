@@ -58,6 +58,7 @@ dependencies {
 
     // Hilt
     implementation "com.google.dagger:hilt-android:$libs.hilt"
+    implementation project(path: ':core:common')
     kapt "com.google.dagger:hilt-compiler:$libs.hilt"
 
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1"

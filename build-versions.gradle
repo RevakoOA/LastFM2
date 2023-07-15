@@ -3,19 +3,21 @@ ext {
     JAVA_COMPILE_VERSION = JavaVersion.VERSION_17
 
     KOTLIN_VERSION = "1.8.20"
-    KOTLIN_COMPILER_EXTENSION_VERSION = "1.4.5" // Taken based on KOTLIN_VERSION from https://developer.android.com/jetpack/androidx/releases/compose-compile
+    KOTLIN_COMPILER_EXTENSION_VERSION = "1.4.5"
+    // Taken based on KOTLIN_VERSION from https://developer.android.com/jetpack/androidx/releases/compose-compile
 
     MIN_SDK_NUMBER = 24
     TARGET_SDK_NUMBER = 34
 
     libs = [
-        retrofit : "2.9.0",
-        paging : "3.1.1",
-        hilt : "2.44",
+            retrofit: "2.9.0",
+            paging  : "3.1.1",
+            hilt    : "2.44",
+            gson    : "2.8.8",
     ]
 
     testing = [
-        junit : "1.1.3",
-        espresso : "3.4.0",
+            junit   : "1.1.3",
+            espresso: "3.4.0",
     ]
 }
