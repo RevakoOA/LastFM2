@@ -1,13 +1,15 @@
 package com.ostapr.core.network.data
 
 import com.google.gson.JsonDeserializer
+import com.google.gson.annotations.SerializedName
 
 internal data class TopArtistsResponse(
     val topArtists: TopArtists
 )
 
 internal data class TopArtists(
-    val artist: List<Artist>,
+    @SerializedName("artist")
+    val artists: List<Artist>,
     val attrs: Attrs,
 )
 
@@ -18,7 +20,3 @@ internal data class Attrs(
     val total: String,
     val totalPages: String,
 )
-
-class TopArtistsDeserializer : JsonDeserializer<>
-
-,

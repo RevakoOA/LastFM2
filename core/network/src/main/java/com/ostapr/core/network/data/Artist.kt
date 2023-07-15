@@ -28,6 +28,7 @@ internal data class Artist(
     }
 }
 
+internal data class ArtistDetailsResponse(val artist: ArtistDetails)
 internal data class ArtistDetails(
     val name: String,
     val mbid: String,

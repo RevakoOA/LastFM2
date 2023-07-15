@@ -78,7 +78,7 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.6.0'
     implementation project(path: ':core:domain')
     testImplementation "junit:junit:4.13.2"
-    androidTestImplementation "androidx.test.ext:junit:$testing.junit"
+    androidTestImplementation "androidx.test.ext:junit:$testing.junit_ext"
     androidTestImplementation "androidx.test.espresso:espresso-core:$testing.espresso"
     androidTestImplementation platform("androidx.compose:compose-bom:2022.10.00")
     androidTestImplementation "androidx.compose.ui:ui-test-junit4"

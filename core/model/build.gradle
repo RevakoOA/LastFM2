@@ -43,5 +43,5 @@ dependencies {
     implementation 'androidx.core:core-ktx:+'
     implementation 'androidx.core:core-ktx:+'
     testImplementation "junit:junit:4.13.2"
-    androidTestImplementation "androidx.test.ext:junit:$testing.junit"
+    androidTestImplementation "androidx.test.ext:junit:$testing.junit_ext"
 }

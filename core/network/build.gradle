@@ -72,7 +72,11 @@ dependencies {
     implementation 'androidx.core:core-ktx:+'
     implementation 'androidx.core:core-ktx:+'
     testImplementation "junit:junit:4.13.2"
-    androidTestImplementation "androidx.test.ext:junit:$testing.junit"
+
+    testImplementation "androidx.paging:paging-testing:$testing.paging"
+    testImplementation "org.assertj:assertj-core:3.20.2"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$testing.coroutines"
+    androidTestImplementation "androidx.test.ext:junit:$testing.junit_ext"
 }
 
 // Allow references to generated code
