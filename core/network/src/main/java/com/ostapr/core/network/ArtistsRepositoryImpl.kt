@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Singleton
 internal class ArtistsRepositoryImpl @Inject constructor(
     private val artistsService: ArtistsService
-): ArtistsRepository {
+) : ArtistsRepository {
     override fun getTopArtists(): Flow<PagingData<Artist>> = Pager(
         config = PagingConfig(
             pageSize = 20,
@@ -23,7 +23,8 @@ internal class ArtistsRepositoryImpl @Inject constructor(
         }
     ).flow
 
-    override suspend fun fetchArtistsDetails(artistId: String): ArtistDetails? {
-        return null
+    override suspend fun fetchArtistsDetails(artistId: String): ArtistDetails {
+        val response = artistsService.getArtistDetails(artistId)
+        return response.artist.convertToDomainClass()
     }
 }
