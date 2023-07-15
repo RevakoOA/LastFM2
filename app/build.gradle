@@ -63,7 +63,8 @@ dependencies {
     implementation "androidx.compose.ui:ui-graphics"
     implementation "androidx.compose.ui:ui-tooling-preview"
     implementation "androidx.compose.material3:material3"
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation "io.coil-kt:coil:$libs.coil"
+    implementation "io.coil-kt:coil-compose:$libs.coil"
     implementation 'androidx.core:core-ktx:+'
     implementation 'androidx.core:core-ktx:+'
     implementation project(path: ':core:network')
@@ -71,6 +72,7 @@ dependencies {
 
     // Hilt
     implementation "com.google.dagger:hilt-android:$libs.hilt"
+    implementation 'androidx.paging:paging-runtime-ktx:3.1.1'
     kapt "com.google.dagger:hilt-compiler:$libs.hilt"
 
     implementation 'androidx.core:core-ktx:+'
