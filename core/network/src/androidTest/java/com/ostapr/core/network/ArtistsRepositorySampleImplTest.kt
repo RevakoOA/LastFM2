@@ -2,15 +2,12 @@ package com.ostapr.core.network
 
 import android.content.Context
 import androidx.paging.testing.asSnapshot
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.ostapr.model.Artist
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.assertj.core.api.Assertions.assertThat
-import org.bouncycastle.util.test.SimpleTest.runTest
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,8 +16,14 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 internal class ArtistsRepositorySampleImplTest {
 
-    private val context: Context = ApplicationProvider.getApplicationContext()
-    private val sampleRepo: ArtistsRepositorySampleImpl = ArtistsRepositorySampleImpl(context)
+    private lateinit var context: Context
+    private lateinit var sampleRepo: ArtistsRepositorySampleImpl
+
+    @Before
+    fun setup() {
+        context = InstrumentationRegistry.getInstrumentation().targetContext
+        sampleRepo = ArtistsRepositorySampleImpl(context)
+    }
 
     @Test
     fun getTopArtists_flowIsCorrect() = runTest {

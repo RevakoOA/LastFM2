@@ -17,6 +17,8 @@ android {
     namespace 'com.ostapr.core.network'
     compileSdk TARGET_SDK_NUMBER
 
+    sourceSets.test.resources.srcDirs += ["src/main/assets"]
+
     buildFeatures {
         buildConfig = true
     }
@@ -48,34 +50,37 @@ android {
 }
 
 dependencies {
-    implementation "com.google.code.gson:gson:2.8.9"
+    implementation project(path: ':core:domain')
+    implementation project(path: ':core:common')
+
+    implementation "com.google.code.gson:gson:$libs.gson"
     implementation "com.squareup.retrofit2:retrofit:$libs.retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$libs.retrofit"
-    implementation 'androidx.paging:paging-common-ktx:3.1.1'
-    implementation project(path: ':core:domain')
+    implementation "androidx.paging:paging-common-ktx:$testing.paging"
 
     implementation "androidx.paging:paging-runtime:$libs.paging"
 
     // Hilt
     implementation "com.google.dagger:hilt-android:$libs.hilt"
-    implementation project(path: ':core:common')
     kapt "com.google.dagger:hilt-compiler:$libs.hilt"
 
-    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
-    implementation "androidx.core:core-ktx:1.8.0"
     implementation "androidx.appcompat:appcompat:1.6.1"
     implementation "com.google.android.material:material:1.9.0"
     implementation project(path: ':core:model')
-    implementation 'androidx.core:core-ktx:+'
-    implementation 'androidx.core:core-ktx:+'
-    implementation 'androidx.core:core-ktx:+'
-    testImplementation "junit:junit:4.13.2"
 
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.robolectric:robolectric:4.10.3"
     testImplementation "androidx.paging:paging-testing:$testing.paging"
     testImplementation "org.assertj:assertj-core:3.20.2"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$testing.coroutines"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$testing.coroutines"
+    testImplementation "androidx.test.ext:junit:$testing.junit_ext"
+
+    androidTestImplementation "androidx.test:runner:$testing.android_runner"
+    androidTestImplementation "androidx.paging:paging-testing:$testing.paging"
+    androidTestImplementation "org.assertj:assertj-core:3.20.2"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$testing.coroutines"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$testing.coroutines"
     androidTestImplementation "androidx.test.ext:junit:$testing.junit_ext"
 }
 

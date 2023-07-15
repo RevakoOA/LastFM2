@@ -1,10 +1,10 @@
 package com.ostapr.model
 
 data class Artist(
-    val name: String,
-    val mbid: String,
-    val url: String,
-    val images: Map<String, String>,
+    val name: String?,
+    val mbid: String?,
+    val url: String?,
+    val images: Map<String, String>?,
     val rank: Int,
 ) {
 
@@ -18,7 +18,7 @@ data class Artist(
     }
 
     /** Pick best image url based on input criteria. */
-    fun pickImageUrl(): String? = images.values.firstOrNull()
+    fun pickImageUrl(): String? = images?.values?.firstOrNull()
 }
 
 data class ArtistDetails(

@@ -4,6 +4,7 @@ import com.google.gson.JsonDeserializer
 import com.google.gson.annotations.SerializedName
 
 internal data class TopArtistsResponse(
+    @SerializedName("topartists")
     val topArtists: TopArtists
 )
 
