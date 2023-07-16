@@ -40,9 +40,8 @@ fun artistItem(artist: Artist) {
                 .fillMaxWidth(), contentScale = ContentScale.Crop
         )
         Column(modifier = Modifier.align(Alignment.BottomCenter)) {
-            Text(text = artist.name, style = MaterialTheme.typography.titleSmall)
+            Text(text = artist.name ?: "", style = MaterialTheme.typography.titleSmall)
             Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Songs: ${artist.playCount}", style = MaterialTheme.typography.labelSmall)
         }
     }
 }
@@ -53,17 +52,17 @@ fun Preview() {
     val artists = listOf(
         Artist(
             "Bee Gees",
-            0,
-            0,
             "bf0f7e29-dfe1-416c-b5c6-f9ebc19ea810",
-            imageUrls = listOf("https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png")
+            "bf0f7e29-dfe1-416c-b5c6-f9ebc19ea810",
+            images = mapOf("small" to "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"),
+            rank = 1
         ),
         Artist(
             "Boney M.",
-            0,
-            0,
             "5403bf6e-bc1d-4e62-b31f-926a2bf66a14",
-            listOf("https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png")
+            "",
+            images = mapOf("small" to "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"),
+            rank = 2
         )
     )
     artistsGrid(artists)

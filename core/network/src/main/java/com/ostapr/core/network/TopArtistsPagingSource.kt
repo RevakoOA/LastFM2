@@ -40,6 +40,6 @@ internal class TopArtistsPagingSource(
     }
 
     companion object {
-        const val UKRAINE_COUNTRY_CODE = "uk"
+        const val UKRAINE_COUNTRY_CODE = "ukraine"
     }
 }

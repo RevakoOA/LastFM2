@@ -14,7 +14,7 @@ import coil.request.CachePolicy
 import com.ostapr.lastfm.R
 import com.ostapr.model.Artist
 
-class ArtistsListAdapter : PagingDataAdapter<Artist, ArtistPosterViewHolder>(MovieDiffCallBack()) {
+class ArtistsListAdapter : PagingDataAdapter<Artist, ArtistPosterViewHolder>(MovieDiffCallBack) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArtistPosterViewHolder =
         ArtistPosterViewHolder(
@@ -26,7 +26,7 @@ class ArtistsListAdapter : PagingDataAdapter<Artist, ArtistPosterViewHolder>(Mov
     }
 }
 
-class MovieDiffCallBack : DiffUtil.ItemCallback<Artist>() {
+object MovieDiffCallBack : DiffUtil.ItemCallback<Artist>() {
     override fun areItemsTheSame(oldItem: Artist, newItem: Artist): Boolean {
         return oldItem.mbid == newItem.mbid
     }

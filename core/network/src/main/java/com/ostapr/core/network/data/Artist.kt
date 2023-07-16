@@ -12,7 +12,7 @@ internal data class Artist(
     @SerializedName("image")
     val images: List<Image>,
     @SerializedName("@attr")
-    val attrs: Attrs
+    val attrs: Attrs?
 ) {
     data class Attrs(val rank: Int)
 
@@ -23,7 +23,7 @@ internal data class Artist(
             mbid = mbid,
             url = url,
             images = imagesMap,
-            rank = attrs.rank
+            rank = attrs?.rank ?: -1
         )
     }
 }
