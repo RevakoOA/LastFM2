@@ -63,7 +63,7 @@ dependencies {
     // Hilt
     implementation "com.google.dagger:hilt-android:$libs.hilt"
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation "org.junit.jupiter:junit-jupiter:$testing.jupiter"
     kapt "com.google.dagger:hilt-compiler:$libs.hilt"
 
     implementation "androidx.appcompat:appcompat:1.6.1"

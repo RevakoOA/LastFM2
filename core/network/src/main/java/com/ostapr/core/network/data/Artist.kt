@@ -22,7 +22,10 @@ internal data class Artist(
             name = name,
             mbid = mbid,
             url = url,
-            images = imagesMap,
+            // LastFM returns stubbed images, so we will try to load them by mbid from MusicBrainz
+            // for more info check https://stackoverflow.com/questions/55978243/last-fm-api-returns-same-white-star-image-for-all-artists
+            images = emptyList(),
+            imagesLoaded = false,
             rank = attrs?.rank ?: -1
         )
     }

@@ -4,14 +4,11 @@ import android.content.Context
 import androidx.paging.testing.asSnapshot
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 import com.ostapr.model.Artist
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.runTest
 import org.assertj.core.api.Assertions.assertThat
-import org.bouncycastle.util.test.SimpleTest.runTest
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -19,6 +16,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 internal class ArtistsRepositorySampleImplTest {
 
+    private val scope = TestScope()
     private val context: Context = ApplicationProvider.getApplicationContext()
     private val sampleRepo: ArtistsRepositorySampleImpl = ArtistsRepositorySampleImpl(context)
 
@@ -28,17 +26,15 @@ internal class ArtistsRepositorySampleImplTest {
             name = "Boney M.",
             mbid = "5403bf6e-bc1d-4e62-b31f-926a2bf66a14",
             url = "https://www.last.fm/music/Boney+M.",
-            images = mapOf(
-                "small" to "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
-                "medium" to "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
-                "large" to "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
-                "extralarge" to "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
-                "mega" to "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
-            ),
+            images = emptyList(),
+            imagesLoaded = false,
             rank = 2
         )
-
-        val actualFlow = sampleRepo.getTopArtists()
+        val expected2ndArtistUpdated = expected2ndArtist.copy(
+            images = listOf(),
+            imagesLoaded = true
+        )
+        val actualFlow = sampleRepo.getTopArtists(scope)
         val firstArtists = actualFlow.asSnapshot { scrollTo(3) }
 
         assertThat(firstArtists[1]).isEqualTo(expected2ndArtist)

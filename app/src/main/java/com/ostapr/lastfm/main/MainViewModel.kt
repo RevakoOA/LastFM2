@@ -14,5 +14,5 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(private val artistsRepository: ArtistsRepository) :
     ViewModel() {
     internal val artists: Flow<PagingData<Artist>> =
-        artistsRepository.getTopArtists().cachedIn(viewModelScope)
+        artistsRepository.getTopArtists(viewModelScope).cachedIn(viewModelScope)
 }

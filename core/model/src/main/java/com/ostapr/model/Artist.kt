@@ -4,21 +4,11 @@ data class Artist(
     val name: String?,
     val mbid: String?,
     val url: String?,
-    val images: Map<String, String>?,
+    var images: List<String>,
+    var imagesLoaded: Boolean,
     val rank: Int,
 ) {
-
-    object Sizes {
-        const val SIZE_S = "small"
-        const val SIZE_M = "medium"
-        const val SIZE_L = "large"
-        const val SIZE_XL = "extralarge"
-        const val SIZE_XXL = "mega"
-        const val SIZE_UNKNOWN = ""
-    }
-
-    /** Pick best image url based on input criteria. */
-    fun pickImageUrl(): String? = images?.values?.firstOrNull()
+    fun pickImageUrl(): String? = images.firstOrNull()
 }
 
 data class ArtistDetails(

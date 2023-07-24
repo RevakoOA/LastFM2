@@ -1,8 +1,10 @@
 package com.ostapr.core.network
 
+import com.google.gson.GsonBuilder
 import com.ostapr.core.domain.ArtistsRepository
 import com.ostapr.core.network.ArtistsService.Companion.LAST_FM_BASE_URL
 import com.ostapr.core.network.MusicBrainzService.Companion.MUSIC_BRAINZ_BASE_URL
+import com.ostapr.core.network.data.ArtistRelations
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -20,10 +22,11 @@ import kotlin.annotation.AnnotationRetention.BINARY
 
 @Qualifier
 @Retention(BINARY)
-annotation class LastFmRetrofit
+annotation class LastFmRelated
+
 @Qualifier
 @Retention(BINARY)
-annotation class MusicBrainzRetrofit
+annotation class MusicBrainzRelated
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -35,6 +38,7 @@ internal abstract class ArtistsRepositoryModule {
     companion object {
 
         @Provides
+        @LastFmRelated
         fun provideOkHttpClient(): OkHttpClient {
             return OkHttpClient().newBuilder()
                 .addInterceptor(LastFmApiKeyInterceptor())
@@ -43,27 +47,45 @@ internal abstract class ArtistsRepositoryModule {
 
         @Provides
         @Singleton
-        @LastFmRetrofit
-        fun provideLastFmRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
-            .baseUrl(LAST_FM_BASE_URL)
-            .build()
+        @LastFmRelated
+        fun provideLastFmRetrofit(@LastFmRelated okHttpClient: OkHttpClient): Retrofit =
+            Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
+                .baseUrl(LAST_FM_BASE_URL)
+                .build()
 
         @Provides
-        fun provideArtistsService(@LastFmRetrofit retrofit: Retrofit): ArtistsService =
+        fun provideArtistsService(@LastFmRelated retrofit: Retrofit): ArtistsService =
             retrofit.create()
 
         @Provides
-        @Singleton
-        @MusicBrainzRetrofit
-        fun provideBrainzRetrofit(): Retrofit = Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(MUSIC_BRAINZ_BASE_URL)
-            .build()
+        @MusicBrainzRelated
+        fun provideMusicBrainzOkHttpClient(): OkHttpClient {
+            return OkHttpClient().newBuilder()
+                .addInterceptor(UserAgentHeaderInterceptor())
+                .build()
+        }
 
         @Provides
-        fun provideMusicBrainzService(@MusicBrainzRetrofit retrofit: Retrofit): MusicBrainzService =
+        @Singleton
+        @MusicBrainzRelated
+        fun provideBrainzRetrofit(@MusicBrainzRelated okHttpClient: OkHttpClient): Retrofit =
+            Retrofit.Builder()
+                .addConverterFactory(
+                    GsonConverterFactory.create(
+                        GsonBuilder().registerTypeAdapter(
+                            ArtistRelations::class.java,
+                            ArtistRelationsDeserializer()
+                        ).create()
+                    )
+                )
+                .client(okHttpClient)
+                .baseUrl(MUSIC_BRAINZ_BASE_URL)
+                .build()
+
+        @Provides
+        fun provideMusicBrainzService(@MusicBrainzRelated retrofit: Retrofit): MusicBrainzService =
             retrofit.create()
 
     }
@@ -75,6 +97,16 @@ internal class LastFmApiKeyInterceptor : Interceptor {
         val modifiedUrl = originalRequest.url().newBuilder()
             .addQueryParameter("api_key", BuildConfig.LAST_FM_API_KEY).build()
         val modifiedRequest = originalRequest.newBuilder().url(modifiedUrl).build()
+        return chain.proceed(modifiedRequest)
+    }
+}
+
+internal class UserAgentHeaderInterceptor : Interceptor {
+    override fun intercept(chain: Interceptor.Chain): Response {
+        val originalRequest = chain.request()
+        val modifiedRequest = originalRequest.newBuilder()
+            .addHeader("User-Agent", "LastFM client/v0.0.1 (revakooa@gmail.com)")
+            .build()
         return chain.proceed(modifiedRequest)
     }
 }

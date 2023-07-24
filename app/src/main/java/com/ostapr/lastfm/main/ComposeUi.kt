@@ -54,14 +54,16 @@ fun Preview() {
             "Bee Gees",
             "bf0f7e29-dfe1-416c-b5c6-f9ebc19ea810",
             "bf0f7e29-dfe1-416c-b5c6-f9ebc19ea810",
-            images = mapOf("small" to "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"),
+            images = listOf("https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"),
+            imagesLoaded = true,
             rank = 1
         ),
         Artist(
             "Boney M.",
             "5403bf6e-bc1d-4e62-b31f-926a2bf66a14",
             "",
-            images = mapOf("small" to "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"),
+            images = listOf("https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"),
+            imagesLoaded = true,
             rank = 2
         )
     )
