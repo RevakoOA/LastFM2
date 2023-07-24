@@ -19,17 +19,17 @@ internal class ArtistRelationsDeserializerTest {
             relations = listOf(
                 RelationItem(
                     "image",
-                    "https://commons.wikimedia.org/wiki/File:Gloria_Gaynor_(1976).jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/f/ff/Gloria_Gaynor_(1976).jpg"
                 ),
                 RelationItem(
                     "image",
-                    "https://commons.wikimedia.org/wiki/File:Gloria_Gaynor_2012_(cropped).jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/f/ff/Gloria_Gaynor_2012_(cropped).jpg"
                 )
             )
         )
         val gson = GsonBuilder().registerTypeAdapter(
             ArtistRelations::class.java,
-            ArtistRelationsDeserializer()
+            ArtistRelationsDeserializer(MusicBrainzUrlConvertor())
         ).create()
 
         val inputStream =

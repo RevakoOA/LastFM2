@@ -76,7 +76,7 @@ internal abstract class ArtistsRepositoryModule {
                     GsonConverterFactory.create(
                         GsonBuilder().registerTypeAdapter(
                             ArtistRelations::class.java,
-                            ArtistRelationsDeserializer()
+                            ArtistRelationsDeserializer(MusicBrainzUrlConvertor())
                         ).create()
                     )
                 )
