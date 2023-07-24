@@ -1,0 +1,591 @@
+{
+  "gender-id": "93452b5a-a947-30c8-934f-6a4056b151c2",
+  "ipis": [],
+  "type": "Person",
+  "life-span": {
+    "end": null,
+    "ended": false,
+    "begin": "1943-09-07"
+  },
+  "sort-name": "Gaynor, Gloria",
+  "id": "d5c51c36-ac67-4727-91ed-ee9f0df81a2d",
+  "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+  "name": "Gloria Gaynor",
+  "country": "US",
+  "begin-area": {
+    "type": null,
+    "id": "85c7cd5f-6fe2-4195-a44d-69fa390bd6ec",
+    "sort-name": "Newark",
+    "disambiguation": "",
+    "type-id": null,
+    "name": "Newark"
+  },
+  "gender": "Female",
+  "area": {
+    "name": "United States",
+    "iso-3166-1-codes": [
+      "US"
+    ],
+    "type-id": null,
+    "disambiguation": "",
+    "sort-name": "United States",
+    "id": "489ce91b-6658-3307-9877-795b68554c98",
+    "type": null
+  },
+  "relations": [
+    {
+      "url": {
+        "id": "5fd0635e-bbc7-4c92-b075-b50515e72f2a",
+        "resource": "https://www.allmusic.com/artist/mn0000664849"
+      },
+      "begin": null,
+      "type": "allmusic",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "ended": false,
+      "direction": "forward",
+      "end": null,
+      "attributes": [],
+      "target-credit": "",
+      "type-id": "6b3e3c85-0002-4f34-aca6-80ace0d7e846",
+      "source-credit": "",
+      "target-type": "url"
+    },
+    {
+      "target-type": "url",
+      "source-credit": "",
+      "type-id": "d028a975-000c-4525-9333-d3c8425e4b54",
+      "attributes": [],
+      "target-credit": "",
+      "end": "2020-11-19",
+      "ended": true,
+      "direction": "forward",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "type": "BBC Music page",
+      "begin": null,
+      "url": {
+        "resource": "https://www.bbc.co.uk/music/artists/d5c51c36-ac67-4727-91ed-ee9f0df81a2d",
+        "id": "9cf86325-ce15-420a-a440-68970ec6ee53"
+      }
+    },
+    {
+      "type": "biography",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "source-credit": "",
+      "target-type": "url",
+      "end": null,
+      "ended": false,
+      "direction": "forward",
+      "target-credit": "",
+      "attributes": [],
+      "type-id": "78f75830-94e1-4138-8f8a-643e3bb21ce5",
+      "url": {
+        "id": "4cb3d7be-a374-469f-92f1-ec07377c0aef",
+        "resource": "https://web.archive.org/web/20080720075842/http://www.discomuseum.com/GloriaGaynor.html"
+      },
+      "begin": null
+    },
+    {
+      "begin": null,
+      "url": {
+        "id": "a7086f4a-2a97-4416-b0f7-c25efeb6ddec",
+        "resource": "http://www.soulwalking.co.uk/Gloria%20Gaynor.html"
+      },
+      "source-credit": "",
+      "target-type": "url",
+      "ended": false,
+      "direction": "forward",
+      "end": null,
+      "target-credit": "",
+      "attributes": [],
+      "type-id": "78f75830-94e1-4138-8f8a-643e3bb21ce5",
+      "type": "biography",
+      "attribute-ids": {},
+      "attribute-values": {}
+    },
+    {
+      "url": {
+        "resource": "https://www.discogs.com/artist/14683",
+        "id": "24692471-e208-4792-af33-b0addc5d76ed"
+      },
+      "begin": null,
+      "attribute-values": {},
+      "attribute-ids": {},
+      "type": "discogs",
+      "type-id": "04a5b104-a4c2-4bac-99a1-7b837c37d9e4",
+      "target-credit": "",
+      "attributes": [],
+      "ended": false,
+      "end": null,
+      "direction": "forward",
+      "target-type": "url",
+      "source-credit": ""
+    },
+    {
+      "url": {
+        "resource": "https://open.spotify.com/artist/6V6WCgi7waF55bJmylC4H5",
+        "id": "44e76a02-7636-411c-8168-cd1e5d1282f8"
+      },
+      "begin": null,
+      "type": "free streaming",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "end": null,
+      "ended": false,
+      "direction": "forward",
+      "target-credit": "",
+      "attributes": [],
+      "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+      "source-credit": "",
+      "target-type": "url"
+    },
+    {
+      "type": "free streaming",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "source-credit": "",
+      "target-type": "url",
+      "direction": "forward",
+      "end": null,
+      "ended": false,
+      "target-credit": "",
+      "attributes": [],
+      "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+      "url": {
+        "resource": "https://www.deezer.com/artist/303",
+        "id": "984cde1e-8b62-4334-a08e-bc6c0386b02f"
+      },
+      "begin": null
+    },
+    {
+      "url": {
+        "resource": "https://commons.wikimedia.org/wiki/File:Gloria_Gaynor_(1976).jpg",
+        "id": "dbece8aa-c3aa-426d-bd91-67f0d8ba4feb"
+      },
+      "begin": null,
+      "attribute-values": {},
+      "attribute-ids": {},
+      "type": "image",
+      "type-id": "221132e9-e30e-43f2-a741-15afc4c5fa7c",
+      "target-credit": "",
+      "attributes": [],
+      "ended": false,
+      "end": null,
+      "direction": "forward",
+      "target-type": "url",
+      "source-credit": ""
+    },
+    {
+      "attributes": [],
+      "target-credit": "",
+      "end": null,
+      "ended": false,
+      "direction": "forward",
+      "type-id": "221132e9-e30e-43f2-a741-15afc4c5fa7c",
+      "target-type": "url",
+      "source-credit": "",
+      "type": "image",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "begin": null,
+      "url": {
+        "resource": "https://commons.wikimedia.org/wiki/File:Gloria_Gaynor_2012_(cropped).jpg",
+        "id": "b3884268-adb1-4595-bb95-1c7fff93dce7"
+      }
+    },
+    {
+      "begin": null,
+      "url": {
+        "id": "f1a35754-d68d-4f72-9f72-c5881bf8effd",
+        "resource": "https://www.imdb.com/name/nm0310974/"
+      },
+      "type-id": "94c8b0cc-4477-4106-932c-da60e63de61c",
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "target-credit": "",
+      "attributes": [],
+      "source-credit": "",
+      "target-type": "url",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "IMDb"
+    },
+    {
+      "begin": null,
+      "url": {
+        "id": "4102c369-9b83-4972-9068-af9649149805",
+        "resource": "https://www.last.fm/music/Gloria+Gaynor"
+      },
+      "target-type": "url",
+      "source-credit": "",
+      "type-id": "08db8098-c0df-4b78-82c3-c8697b4bba7f",
+      "target-credit": "",
+      "attributes": [],
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "attribute-values": {},
+      "attribute-ids": {},
+      "type": "last.fm"
+    },
+    {
+      "begin": null,
+      "url": {
+        "resource": "http://www.gloriagaynor.com/",
+        "id": "bf51ad0d-236c-4c1e-8288-c0fc884501fc"
+      },
+      "target-type": "url",
+      "source-credit": "",
+      "type-id": "fe33d22f-c3b0-4d68-bd53-a856badf2b15",
+      "target-credit": "",
+      "attributes": [],
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "attribute-values": {},
+      "attribute-ids": {},
+      "type": "official homepage"
+    },
+    {
+      "target-type": "url",
+      "source-credit": "",
+      "attributes": [],
+      "target-credit": "",
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "type": "other databases",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "begin": null,
+      "url": {
+        "resource": "http://id.loc.gov/authorities/names/n91056809",
+        "id": "9002459b-677f-4bad-b484-32a0047a5ddf"
+      }
+    },
+    {
+      "url": {
+        "id": "82f009f7-0917-4ca4-b25b-b3148576459a",
+        "resource": "http://musicmoz.org/Bands_and_Artists/G/Gaynor,_Gloria/"
+      },
+      "begin": null,
+      "type": "other databases",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "ended": false,
+      "direction": "forward",
+      "end": null,
+      "target-credit": "",
+      "attributes": [],
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "source-credit": "",
+      "target-type": "url"
+    },
+    {
+      "target-type": "url",
+      "source-credit": "",
+      "attributes": [],
+      "target-credit": "",
+      "direction": "forward",
+      "end": null,
+      "ended": false,
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "type": "other databases",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "begin": null,
+      "url": {
+        "id": "efeac487-fcac-4a43-a8b0-b989cdbf77c3",
+        "resource": "https://catalogue.bnf.fr/ark:/12148/cb139444330"
+      }
+    },
+    {
+      "url": {
+        "id": "f84398eb-9060-409f-a935-657cf9b6510b",
+        "resource": "https://d-nb.info/gnd/120393212"
+      },
+      "begin": null,
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "other databases",
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "end": null,
+      "direction": "forward",
+      "ended": false,
+      "attributes": [],
+      "target-credit": "",
+      "source-credit": "",
+      "target-type": "url"
+    },
+    {
+      "target-type": "url",
+      "source-credit": "",
+      "attributes": [],
+      "target-credit": "",
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "type": "other databases",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "begin": null,
+      "url": {
+        "resource": "https://rateyourmusic.com/artist/gloria_gaynor",
+        "id": "58bc68aa-c4c1-4f4f-84fd-e2b6625eb410"
+      }
+    },
+    {
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "other databases",
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "ended": false,
+      "direction": "forward",
+      "end": null,
+      "attributes": [],
+      "target-credit": "",
+      "source-credit": "",
+      "target-type": "url",
+      "url": {
+        "id": "594fcdba-938b-4858-bdfe-30da24e05e1f",
+        "resource": "https://www.musik-sammler.de/artist/gloria-gaynor/"
+      },
+      "begin": null
+    },
+    {
+      "url": {
+        "resource": "https://www.whosampled.com/Gloria-Gaynor",
+        "id": "c0c12440-90b3-415e-a4b5-81eaac7b7d9e"
+      },
+      "begin": null,
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "other databases",
+      "source-credit": "",
+      "target-type": "url",
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "ended": false,
+      "direction": "forward",
+      "end": null,
+      "target-credit": "",
+      "attributes": []
+    },
+    {
+      "url": {
+        "resource": "https://www.worldcat.org/identities/lccn-n91056809",
+        "id": "b56cb3a3-5bab-4c42-a5ba-fee7e595af34"
+      },
+      "begin": null,
+      "type": "other databases",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "attributes": [],
+      "target-credit": "",
+      "ended": false,
+      "end": null,
+      "direction": "forward",
+      "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+      "target-type": "url",
+      "source-credit": ""
+    },
+    {
+      "begin": null,
+      "url": {
+        "id": "f9499e7d-f176-43c9-933f-3b6132f88d27",
+        "resource": "https://itunes.apple.com/us/artist/id136869"
+      },
+      "source-credit": "",
+      "target-type": "url",
+      "end": null,
+      "ended": false,
+      "direction": "forward",
+      "attributes": [],
+      "target-credit": "",
+      "type-id": "f8319a2f-f824-4617-81c8-be6560b3b203",
+      "type": "purchase for download",
+      "attribute-ids": {},
+      "attribute-values": {}
+    },
+    {
+      "begin": null,
+      "url": {
+        "resource": "https://www.amazon.com/-/e/B000APZ23U",
+        "id": "78a061cc-39f3-4f56-81e3-eb71469a97ab"
+      },
+      "source-credit": "",
+      "target-type": "url",
+      "type-id": "611b1862-67af-4253-a64f-34adba305d1d",
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "target-credit": "",
+      "attributes": [],
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "purchase for mail-order"
+    },
+    {
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "secondhandsongs",
+      "type-id": "79c5b84d-a206-4f4c-9832-78c028c312c3",
+      "direction": "forward",
+      "end": null,
+      "ended": false,
+      "target-credit": "",
+      "attributes": [],
+      "source-credit": "",
+      "target-type": "url",
+      "url": {
+        "resource": "https://secondhandsongs.com/artist/344",
+        "id": "d97e95fc-273c-4c70-b612-700a29c538fc"
+      },
+      "begin": null
+    },
+    {
+      "url": {
+        "id": "207312c7-f7f0-44d3-9bfe-da3878870f07",
+        "resource": "https://www.setlist.fm/setlists/gloria-gaynor-7bd6bef4.html"
+      },
+      "begin": null,
+      "type": "setlistfm",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "end": null,
+      "ended": false,
+      "direction": "forward",
+      "attributes": [],
+      "target-credit": "",
+      "type-id": "bf5d0d5e-27a1-4e94-9df7-3cdc67b3b207",
+      "source-credit": "",
+      "target-type": "url"
+    },
+    {
+      "type": "social network",
+      "attribute-ids": {},
+      "attribute-values": {},
+      "end": null,
+      "direction": "forward",
+      "ended": false,
+      "target-credit": "",
+      "attributes": [],
+      "type-id": "99429741-f3f6-484b-84f8-23af51991770",
+      "source-credit": "",
+      "target-type": "url",
+      "url": {
+        "resource": "https://twitter.com/gloriagaynor",
+        "id": "bd9fda66-1a12-4c47-bf15-8807ae35d8a7"
+      },
+      "begin": null
+    },
+    {
+      "type": "social network",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "target-type": "url",
+      "source-credit": "",
+      "target-credit": "",
+      "attributes": [],
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "type-id": "99429741-f3f6-484b-84f8-23af51991770",
+      "url": {
+        "resource": "https://www.facebook.com/GloriaGaynor",
+        "id": "7ad11310-f52b-46c2-a9bc-444d3db08c15"
+      },
+      "begin": null
+    },
+    {
+      "type": "songkick",
+      "attribute-values": {},
+      "attribute-ids": {},
+      "target-type": "url",
+      "source-credit": "",
+      "attributes": [],
+      "target-credit": "",
+      "end": null,
+      "ended": false,
+      "direction": "forward",
+      "type-id": "aac9c4bc-a5b9-30b8-9839-e3ac314c6e58",
+      "url": {
+        "id": "32e87223-5ace-4931-9b1e-39b44505d8d6",
+        "resource": "https://www.songkick.com/artists/82341"
+      },
+      "begin": null
+    },
+    {
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "streaming",
+      "type-id": "63cc5d1f-f096-4c94-a43f-ecb32ea94161",
+      "ended": false,
+      "direction": "forward",
+      "end": null,
+      "target-credit": "",
+      "attributes": [],
+      "source-credit": "",
+      "target-type": "url",
+      "url": {
+        "id": "78218333-a6d7-4aad-9422-c543e820f38a",
+        "resource": "https://tidal.com/artist/31881"
+      },
+      "begin": null
+    },
+    {
+      "begin": null,
+      "url": {
+        "resource": "http://viaf.org/viaf/44490148",
+        "id": "2c3463cc-929a-40c6-a0b6-278caf43c970"
+      },
+      "source-credit": "",
+      "target-type": "url",
+      "type-id": "e8571dcc-35d4-4e91-a577-a3382fd84460",
+      "direction": "forward",
+      "ended": false,
+      "end": null,
+      "target-credit": "",
+      "attributes": [],
+      "attribute-ids": {},
+      "attribute-values": {},
+      "type": "VIAF"
+    },
+    {
+      "begin": null,
+      "url": {
+        "id": "dd5b351e-8702-4858-b2e2-13656b013c81",
+        "resource": "https://www.wikidata.org/wiki/Q228918"
+      },
+      "target-credit": "",
+      "attributes": [],
+      "end": null,
+      "direction": "forward",
+      "ended": false,
+      "type-id": "689870a4-a1e4-4912-b17f-7b2664215698",
+      "target-type": "url",
+      "source-credit": "",
+      "type": "wikidata",
+      "attribute-values": {},
+      "attribute-ids": {}
+    }
+  ],
+  "end_area": null,
+  "isnis": [
+    "0000000078393263"
+  ],
+  "disambiguation": "",
+  "begin_area": {
+    "type": null,
+    "id": "85c7cd5f-6fe2-4195-a44d-69fa390bd6ec",
+    "sort-name": "Newark",
+    "disambiguation": "",
+    "type-id": null,
+    "name": "Newark"
+  },
+  "end-area": null
+}
