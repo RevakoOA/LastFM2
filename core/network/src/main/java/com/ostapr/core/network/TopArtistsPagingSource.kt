@@ -3,6 +3,7 @@ package com.ostapr.core.network
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.ostapr.core.network.data.RelationItem.Companion.TYPE_IMAGE
+import com.ostapr.core.network.musicbrainz.MusicBrainzService
 import com.ostapr.model.Artist
 import kotlinx.coroutines.CoroutineScope
 import retrofit2.HttpException

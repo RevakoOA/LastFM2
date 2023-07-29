@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import com.ostapr.core.common.SampleDataParser
 import com.ostapr.core.network.data.ArtistRelations
 import com.ostapr.core.network.data.RelationItem
+import com.ostapr.core.network.musicbrainz.MusicBrainzUrlConvertor
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith

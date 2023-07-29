@@ -3,8 +3,10 @@ package com.ostapr.core.network
 import com.google.gson.GsonBuilder
 import com.ostapr.core.domain.ArtistsRepository
 import com.ostapr.core.network.ArtistsService.Companion.LAST_FM_BASE_URL
-import com.ostapr.core.network.MusicBrainzService.Companion.MUSIC_BRAINZ_BASE_URL
+import com.ostapr.core.network.musicbrainz.MusicBrainzService.Companion.MUSIC_BRAINZ_BASE_URL
 import com.ostapr.core.network.data.ArtistRelations
+import com.ostapr.core.network.musicbrainz.MusicBrainzService
+import com.ostapr.core.network.musicbrainz.MusicBrainzUrlConvertor
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

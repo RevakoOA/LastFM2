@@ -1,4 +1,4 @@
-package com.ostapr.core.network
+package com.ostapr.core.network.musicbrainz
 
 import com.ostapr.core.network.data.ArtistRelations
 import retrofit2.http.GET

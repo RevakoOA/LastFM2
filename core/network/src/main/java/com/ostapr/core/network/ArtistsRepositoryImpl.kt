@@ -4,6 +4,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.ostapr.core.domain.ArtistsRepository
+import com.ostapr.core.network.musicbrainz.MusicBrainzService
 import com.ostapr.model.Artist
 import com.ostapr.model.ArtistDetails
 import kotlinx.coroutines.CoroutineScope
